@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByrgenWerthCollective Link Hierarchy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00d4ff;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        
+        .subtitle {
+            text-align: center;
+            margin-bottom: 50px;
+            font-style: italic;
+            color: #a0a0a0;
+        }
+        
+        .hierarchy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .level {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            width: 100%;
+        }
+        
+        .node {
+            background: linear-gradient(145deg, #2c3e50, #34495e);
+            border: 2px solid #00d4ff;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 212, 255, 0.4);
+            border-color: #ff6b6b;
+        }
+        
+        .node.primary {
+            background: linear-gradient(145deg, #ff6b6b, #ee5a52);
+            border-color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            min-width: 300px;
+        }
+        
+        .node.secondary {
+            background: linear-gradient(145deg, #4ecdc4, #44a08d);
+            min-width: 200px;
+        }
+        
+        .node.tertiary {
+            background: linear-gradient(145deg, #45b7d1, #2980b9);
+            min-width: 150px;
+        }
+        
+        .node.social {
+            background: linear-gradient(145deg, #9b59b6, #8e44ad);
+            min-width: 120px;
+            font-size: 0.9rem;
+        }
+        
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid #00d4ff;
+            margin: 10px auto;
+            filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.7));
+        }
+        
+        .connection-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .flow-text {
+            font-size: 0.8rem;
+            color: #00d4ff;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        
+        .strategy-note {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid #00d4ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .strategy-note h3 {
+            color: #00d4ff;
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .level {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .node {
+                min-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">manicBotWarden Link Architecture</div>
+        <div class="subtitle">*Technology that brings people together*</div>
+        
+        <div class="hierarchy">
+            <!-- Level 1: Primary Hub -->
+            <div class="level">
+                <div class="node primary">
+                    <strong>Ko-fi Hub</strong><br>
+                    ko-fi.com/manicBotWarden<br>
+                    <div class="flow-text">PRIMARY COMMAND CENTER</div>
+                </div>
+            </div>
+            
+            <div class="arrow"></div>
+            
+            <!-- Level 2: TopLevel Pages -->
+            <div class="level">
+                <div class="node secondary">
+                    <strong>Instagram</strong><br>
+                    Main Social Platform<br>
+                    <div class="flow-text">LINKS TO KO-FI</div>
+                </div>
+                <div class="node secondary">
+                    <strong>TikTok</strong><br>
+                    Best Discovery Platform<br>
+                    <div class="flow-text">LINKS TO KO-FI</div>
+                </div>
+                <div class="node secondary">
+                    <strong>Snapchat</strong><br>
+                    Local Community Discovery<br>
+                    <div class="flow-text">LINKS TO KO-FI</div>
+                </div>
+            </div>
+            
+            <div class="arrow"></div>
+            
+            <!-- Level 3: Communication Channels -->
+            <div class="level">
+                <div class="node tertiary">
+                    <strong>Main Website</strong><br>
+                    byrgenwerth.co<br>
+                    <div class="flow-text">PROMINENT KO-FI LINK</div>
+                </div>
+                <div class="node tertiary">
+                    <strong>Email</strong><br>
+                    hello@byrgenwerth.co<br>
+                    <div class="flow-text">KO-FI IN SIGNATURE</div>
+                </div>
+                <div class="node tertiary">
+                    <strong>Beta Access</strong><br>
+                    Early Access Portal<br>
+                    <div class="flow-text">KO-FI FOR SUPPORT</div>
+                </div>
+            </div>
+            
+            <div class="arrow"></div>
+            
+            <!-- Level 4: Social Media -->
+            <div class="level">
+                <div class="node social">
+                    <strong>Mastodon</strong><br>
+                    @byrgenwerth<br>
+                    <div class="flow-text">BIO: KO-FI LINK</div>
+                </div>
+                <div class="node social">
+                    <strong>Instagram</strong><br>
+                    (if needed)<br>
+                    <div class="flow-text">BIO: KO-FI LINK</div>
+                </div>
+                <div class="node social">
+                    <strong>Twitter/X</strong><br>
+                    (if needed)<br>
+                    <div class="flow-text">BIO: KO-FI LINK</div>
+                </div>
+                <div class="node social">
+                    <strong>GitHub</strong><br>
+                    Open Source<br>
+                    <div class="flow-text">README: KO-FI LINK</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="strategy-note">
+            <h3>🎯 STRIKE FREEDOM TACTICAL DEPLOYMENT NOTES:</h3>
+            <p><strong>Link Flow Strategy:</strong> Every touchpoint should funnel back to Ko-fi as the central hub. This creates a unified community gathering point and simplifies your collective's maintenance overhead.</p>
+            
+            <p><strong>Bio Template:</strong> "Building tools for artists & communities | Support our work: ko-fi.com/byrgenwerth"</p>
+            
+            <p><strong>Email Signature:</strong> Include Ko-fi link with "Support community art tools: ko-fi.com/byrgenwerth"</p>
+            
+            <p><strong>Website Integration:</strong> Prominent Ko-fi button/widget on every product page and main site footer</p>
+            
+            <p><strong>Content Strategy:</strong> Share updates, progress, and community highlights across all platforms, always directing engagement back to Ko-fi for deeper community interaction</p>
+        </div>
+    </div>
+</body>
+</html>
